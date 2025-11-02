@@ -1,5 +1,6 @@
-import reactImg from "../assets/react-core-concepts.png";
-import { reactDescriptions } from "../data.js";
+import reactImg from "../../assets/react-core-concepts.png";
+import { reactDescriptions } from "../../data.js";
+import "./Header.css";
 
 function genRandomInt(max) {
   return Math.floor(Math.random() * (max + 1));
