@@ -5,8 +5,9 @@ import CoreConcept from "./components/CoreConcept/CoreConcept.jsx";
 import { CORE_CONCEPTS } from "./data";
 
 function App() {
-  function handleSelect() {
-    console.log("Hello World! - selected!");
+  function handleSelect(selectedButton) {
+    // selectedButton => 'components, 'jsx', 'props', 'state'
+    console.log(`Hello World! - selected ${selectedButton}!`);
   }
 
   return (
@@ -25,10 +26,10 @@ function App() {
         <section id="examples">
           <h2>Examples</h2>
           <menu>
-            <TabButton onSelect={handleSelect}>Components</TabButton>
-            <TabButton onSelect={handleSelect}>JSX</TabButton>
-            <TabButton onSelect={handleSelect}>Props</TabButton>
-            <TabButton onSelect={handleSelect}>State</TabButton>
+            <TabButton onSelect={() => handleSelect("components")}>Components</TabButton>
+            <TabButton onSelect={() => handleSelect("jsx")}>JSX</TabButton>
+            <TabButton onSelect={() => handleSelect("props")}>Props</TabButton>
+            <TabButton onSelect={() => handleSelect("state")}>State</TabButton>
           </menu>
           Dynamic Content
         </section>
