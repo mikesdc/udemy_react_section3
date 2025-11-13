@@ -39,7 +39,10 @@ function App() {
             {CORE_CONCEPTS.map((coreConcept) => (
               <CoreConcept key={coreConcept.title} {...coreConcept} />
             ))}
-            {/* <CoreConcept {...CORE_CONCEPTS[0]} />
+            {/* 
+            This code is redundant, use .map method instead.
+
+            <CoreConcept {...CORE_CONCEPTS[0]} />
             <CoreConcept {...CORE_CONCEPTS[1]} />
             <CoreConcept {...CORE_CONCEPTS[2]} />
             <CoreConcept {...CORE_CONCEPTS[3]} /> */}
